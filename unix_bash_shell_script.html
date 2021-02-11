@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix, Bash e Shell Script</title>
+</head>
+<body>
+    <p><a href="fundamentos_desenvolvimento_web.html">voltar</a></p>
+    <h1>Unix, Bash e Shell Script</h1>
+
+    <h2>Configuração</h2>
+        <p>Setup - Configuração do computador</p>
+    
+    <h3>Checklist de Software</h3>
+    <ol>
+        <li>
+            <h4>Visual Studio Code</h4>
+            <p>Além de ser gratuito, é open source</p>
+        </li>
+
+        <li>
+            <H4>Google chrome</H4>
+            <p>mais utilizado da web desde 2012 e possui ótimas ferramentas para auxiliar desenvolvedores web.</p>
+        </li>
+
+        <li>
+            <h4>Zoom</h4>
+            <p>É uma das ferramentas de videoconferência mais bem avaliadas.</p>
+        </li>
+
+        <li>
+            <h4>Slack</h4>
+            <p>É uma ferramenta poderosa de comunicação assíncrona. Semelhante ao whatsapp.</p>
+        </li>
+
+        <li>
+            <h4>Spotify</h4>
+            <p>Ótima ferramenta para ouvir música, e é gratuita apesar dos anúncios</p>
+        </li>
+    </ol>
+
+    <h3>Checklist de Hardware</h3>
+    <ol>
+        <li>
+            Processador com pelo menos dois núcleos
+        </li>
+        <li>
+            Pelo menos 4GB de RAM
+        </li>
+        <li>
+            Pelo menos 120GB de HD
+        </li>
+        <li>
+            Conectividade com rede Wi-Fi
+        </li>
+        <li>
+            Conectividade com fones de ouvido e microfone
+        </li>
+        <li>
+            Webcam
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>Fundamentos do Desenvolvimento Web</h2>
+    <h3>Introdução dividida em quatro partes</h3>
+        <ol>
+            <li>
+                UNIX. 
+                <p>Vamos colocar a mão na massa fazendo comandos no terminal.</p>
+            </li>
+            <li>
+                GIT
+                <p>Depois de entender como os comandos funcionam e de já ter criado seus primeiros scripts, você vai aprender a usar o Git para guardá-los de forma segura.</p>
+            </li>
+            <li>
+                HTML, CSS e JAVASCRIP
+                <p>Aqui você vai aprender a estruturar documentos HTML , estilizá-los com o CSS e criar comportamentos customizados com o JavaScript!</p>
+            </li>
+            <li>
+                CSS elegante e eficiente.
+                <p>Como criar sites responsivos e com CSS elegante e eficiente.</p>
+            </li>
+            <li>
+                JavaScript, HOF, Código assíncrono, Testes unitários.
+                <p>Utilizar o JavaScript em sua plenitude, utilizando recursos avançados como HOF , Código assíncrono , Testes unitários entre outras coisas incríveis!</p>
+            </li>
+        </ol>
+    
+    <hr>
+
+    <h2>Introdução - Unix e Shell</h2>
+    <h3>O que vamos aprender?</h3>
+    <p>Você vai aprender sobre como o Unix funciona, assim como a forma de interação via linha de comando.</p>
+    <p>Unix & Bash</p>
+    <hr>
+
+    <h2>Unix e Bash - Parte 1</h2>
+        <p>Vamos aprender como funciona o Unix e como interagir com ele através do terminal, utilizando o Bash.</p>
+        
+        <h3>Quais são seus principais componentes?</h3>
+        <p>Basicamente o unix é montado em três níveis</p>
+        <ol>
+            <li>Kernel - é o responsável por fazer a interação entre esses dois.
+                <ol>
+                    <li>Hardware - funciona assim que o computador é ligado usando todo hardware indispensável para a maquina (monitor, placa de vídeo, Processador etc..)</li>
+                    <li>Software - são os programas que você utiliza em seu sistema operacional (photoshop, zoom, Visual studio etc..)</li>
+                    <p> </p>
+                </ol>
+            </li>
+            <li>Shell - é a inferface entre o sistema operacional, o usuário e o núcleo do sitema 
+                <ol>
+                    <li>Sistema Operacional - Windows, Linux etc...</li>
+                    <li>Você</li>
+                    <li>Kernel - Cmd, Terminal e ou Interface gráfica</li>
+                </ol>
+                <p>
+                    Tipos de Shell - SH / BASH / CSH / TCSH / ZSH
+                </p>
+            </li>
+            <li>Aplicativos - Softwares e os comandos do terminal (Processos e Arquivos)
+                <ol>
+                    <li>Processos - Tudo oque você faz no Unix é um processo.
+                        <ol>
+                            <li>PID - Identificador de processos, que carrega algumas iformações tipo.
+                                <ol>
+                                    <li>Usuário criador</li>
+                                    <li>Seção do shell</li>
+                                    <li>Estado atual do processo, se está funcionando, suspenso ou aguardando</li>
+                                    <li>Linha de comando utilizada etc..</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <p></p>
+
+                    <li>Arquivos - no Unix tudo é um arquivo (diretórios, arquivos, dispositivos etc..)
+                        <ol>
+                            <li>/ - Raiz representado pela barra</li>
+                            <li>Boot - sendo o arquivo de comparação para inicialização</li>
+                            <li>Bin - Aplicativos binários</li>
+                            <li>Dev - arquivos do dispositivo</li>
+                            <li>Etc - scripts de inicialização</li>
+                            <li>Home - diretórios home para diferentes usuários</li>
+                            <li>Proc - diretório dinâmico especial que mantem informações sobre o estado do sistema, incluindo os processos atualmente execultados</li>
+                            <li>Root - é o diretório Home do usuário root</li>
+                            <li>Sbin - são os binários de sistemas importantes</li>
+                            <li>Tmp - são os arquivos temporários</li>
+                            <li>Usr - aplicativos e arquivos que são na maioria das vezes disponiveis aos acessos de todos usuários</li>
+                            <li>Var - são os arquivos variáveis como logs e banco de dados</li> 
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h3>Quais suas variações?</h3>
+        <h4>Trabalhando com diretórios</h4>
+        <p>ls - lista todos os arquivos e diretórios que estão em seu diretório atual</p>
+        <p>Variações</p>
+        <ol>
+            <li>ls -a - lista arquivos ocultos, mostrando tudo.</li>
+            <li>ls --help
+            <pre>
+                <code>
+    -a, --all        - não ignora entradas começando com .
+    -A, --almost-all - não lista as entradas implícitas . e ..
+    --author         - com -l, emite o autor de cada arquivo
+    -b, --escape     - emite escapes no estilo C para caracteres não-gráficos
+    --block-size=TAM - com -l, escala os tamanhos por TAM ao exibi-los; ex., '--block-size=M'; veja o formato de TAM abaixo
+    -B, --ignore-backups - não lista as entradas implícitas terminadas com ~
+    -c               - com -lt: ordena por, e mostra, ctime (hora da última modificação da informação de estado do arquivo); com -l: mostra o ctime e ordena por nome demais casos: ordena por ctime, mais novos primeiro
+    -C               - lista as entradas em colunas
+    --color[=QUANDO] - controla se usa cores para distinguir os tipos de arquivo. QUANDO pode ser "never" (nunca), "always" (sempre) ou "auto" (automaticamente)
+    -d, --directory  - lista os diretórios em si, e não seu conteúdo
+    -D, --dired      - gera a saída projetada para modo "dired" do Emacs
+    -f               - não ordena, habilita -aU, desabilita -ls --color
+    etc...
+                </code>
+            </pre>
+            </li>
+
+            <li>cd + destino - entra na página de destino</li>
+            <li>clear        - limpa o terminal</li>
+            <li>mkdir        - cria um novo diretório (pasta)</li>
+            <li>cd .         - mostra o local aonde você está</li>
+            <li>cd ..        - volta para o diretório(pasta) anterior</li>
+            <li>pwd          - mostra o diretório completo, desde o root até a sua posição atual</li>
+        </ol>
+
+        <h4>Operações com arquivos e diretórios</h4>
+        <p>Comandos - <code>cp | cat | rm | mv | rmdir</code></p>
+        <ol>
+            <li>ls - Sempre verificar quais diretórios tem em sua posição atual.</li>
+            <li>
+                <p>cp - para copiar um arquivo</p>
+                <ol>
+                    <li>cp + nome arquivo + nome arquivo cópia</li>
+                    <li>obs: não esqueça de colocar a extenção do arquivo ex: .txt | .html | .js</li>
+                </ol>
+            </li>
+            <li>
+                <p>cat - abre arquivos e mostra seu conteúdo</p>
+                 <ol>
+                     <li>cat + nome arquivo.txt</li>
+                     <li>mostrará o conteúdo de nome arquivo.txt no terminal</li>
+                 </ol>
+            </li>
+            <li>
+                <p>rm - Remove(exclui) arquivos com exteção, ex: .txt, .html, .js, etc...</p>
+                <ol>
+                    <li>rm + nome arquivo </li>
+                    <li>obs: não esqueça de colocar a extenção do arquivo ex: .txt | .html | .js</li>
+                </ol>
+            </li>
+            <li>
+                <p>mv - Move arquivos em geral para um outro local</p>
+                <ol>
+                    <li>mv + nome arquivo + /local de destino</li>
+                    <li>com isso conseguimos mudar diretórios e arquivos de um lugar para outro</li>
+                </ol>
+            </li>
+            <li>
+                <p>rmdir - Remove(exclui) diretórios(pastas)</p>
+                <ol>
+                    <li>rmdir + nome diretório</li>
+                    <li>Só funciona se o diretório(pasta) estiver vazio</li>
+                </ol>
+            </li>
+            <li>
+                <p>rm -rf - Remove diretório com todo o seu conteúdo dentro</p>
+                <ol>
+                    <li>rm -rf + nome diretório</li>
+                    <li>-r - indica que quer remover arquivos e diretórios</li>
+                    <li>f - significa que não é preciso nenhum tipo de confirmação</li>
+                </ol>
+            </li>
+        </ol> 
+
+        <h4>Exibir conteúdos de arquivos no terminal.</h4>
+        <p>Comandos - less | head | tail | grep | wc</p>
+
+        <p>less</p>
+        <ol>
+            <li>less + nome arquivo</li>
+            <li>Abre o arquivo em modo de exibição</li>
+            <li>o comando less abre o arquivo no limite do terninal, como se fosse um livreto e para mudar de página, basta clicar na 'tecla espaço' no final aparecerá 'END' indicando que chegou ao fim</li>
+            <li>q - para sair do comando less</li>
+            <li>/frase - pesquisará 'frase' dentro do arquivo | n - navegará entre as frases encontradas</li>
+        </ol>
+
+        <p>head</p>
+        <ol>
+            <li>mostra as 10 primeiras linhas do texto</li>
+            <li>head + nome arquivo</li>
+            <li>head + -5 + nome arquivo - mostrará as 5 primeiras linhas do texto</li>
+        </ol>
+
+        <p>tail</p>
+        <ol>
+            <li>mostra as 10 ultimas linhas do texto</li>
+            <li>tail + nome arquivo</li>
+            <li>tail + -5 + nome arquivo - mostra as 5 ultimas linhas do texto</li>
+        </ol>
+
+        <p>grep</p>
+        <ol>
+            <li>Busca por palavras apontadas</li>
+            <li>grep + frase buscada + nome arquivo - tem que ser palavras exatas</li>
+            <li>grep + -i + frase buscada + nome do arquivo - mostra a 'frase buscada' tanto maiúscula quanto minúscula</li>
+            <li>grep + -i + 'frase buscada' + nome do arquivo - mostra a 'frase buscada entre aspas' tanto maiúscula quanto minúscula</li>
+            <li>grep + -iv + 'frase buscada' + nome arquivo - mostrará toda a lista menos a frase que está entre aspas 'frase buscada'</li>
+            <li>grep + -in + 'frase buscada' + nome arquivo - mostrará a frase buscada e a posição em que ela se encontra</li>
+            <li>grep + -ic + 'frase buscada' + nome arquivo - mostrará quantas vezes o arquivo se repete.</li>
+        </ol>
+
+        <p>wc</p>
+        <ol>
+            <li>wc + nome arquivo</li>
+            <li>o resultado é semelhante a isso:   29  92  545    nome arquivo</li>
+            <li>explicação: 1º - a quantidade de linhas | 2º - a quantidade de palavras | 3º a quantidade de letras(caracteres) </li>
+            <li>wc -w nome arquivo - mostra apenas a quantidade de palavras</li>
+            <li>wc -l nome arquivo - mostra somente o total de linhas do arquivo</li>
+            <li>wc - -c nome arquivo - mostra apenas a quantidade de caracteres do arquivo</li>
+        </ol>
+
+        <h4>Nomeando e buscando ajuda no terminal</h4>
+        <ol>
+            <li>Ex:</li>
+            <li></li>
+        </ol>
+
+        <h3>Arquivos e processos, o que são?</h3>
+
+        <h3>Qual sua estrutura de diretórios?</h3>
+
+        <h3>O que é o terminal?</h3>
+            <p>Para abrir o terminal ctrl + alt + t </p>
+
+        <h3>Comandos executados no Bash.</h3>
+
+        <h3>Objetivo:</h3>
+        <p>Executar comandos no terminal para navegar entre os diretórios;</p>
+        <p>Executar comandos no terminal para criar e manipular arquivos e diretórios;</p>
+        <p>Executar comandos no terminal para realizar buscas;</p>
+        <p>É muito importante que você entenda como interagir de forma eficiente com o sistema operacional no qual você vai programar.</p>
+    <hr>
+
+    <h2>Unix e Bash - Parte 2</h2>
+    <hr>
+</body>
+</html>
